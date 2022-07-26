@@ -1,0 +1,192 @@
+// Reset
+html{
+    font-size: 62.5%;
+}
+
+@import 'abstracts/variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: $Very-dark-blue;
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // height: 100vh;
+    font-size: 1.3rem;
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    gap: 1rem;
+    margin: 2rem;
+    width: 100%;
+
+    &-left_container{
+        // max-width: 30rem;
+        &_top{
+            display: flex;
+            align-items: center;
+            color: #fff;
+            gap: 1.5rem;
+            background-color: $Soft-blue-play;
+            // max-width: 30rem;
+            border-radius: 1rem;
+            padding: 2rem;
+            position: relative;
+            top: 1rem;
+            // justify-content: center;
+
+            img{
+                width: 9rem;
+                border: 2px solid #fff;
+                border-radius: 100%;
+            }
+
+            // .content{
+
+            // }
+        }
+
+
+        &_bottom{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 2.5rem 0 2rem 0;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            background-color: $Dark-blue;
+
+            button{
+                border: none;
+                background: none;
+                cursor: pointer;
+                text-transform: capitalize;
+                color: #fff; //change to blue
+
+                &.active{
+                    color: black;
+                    transition: color 200ms ease-in;
+                }
+            }
+        }
+
+        
+    }
+
+    &-right_container{
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+   
+
+
+        .top{
+            // background-color: red;
+            height: 6rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            // background-image: ;
+            background-repeat: no-repeat;
+            background-position: right;
+
+            &-work{
+                background-color: $Light-red-work;
+                background-image: url(../images/icon-work.svg);
+            }
+            &-play{
+                background-color: $Soft-blue-play;
+                background-image: url(../images/icon-play.svg);
+            }
+            &-study{
+                background-color: $Light-red-study;
+                background-image: url(../images/icon-study.svg);
+            }
+            &-exercise{
+                background-color: $Lime-green-exercise;
+                background-image: url(../images/icon-exercise.svg);
+            }
+            &-social{
+                background-color: $Violet-social;
+                background-image: url(../images/icon-social.svg);
+            }
+            &-self_care{
+                background-color: $Soft-orange-self-care;
+                background-image: url(../images/icon-self-care.svg);
+            }
+
+        }
+    
+
+        .bottom{
+            background-color: $Dark-blue;
+            border-radius: 1rem;
+            margin-top: -2rem;
+            padding: 3rem;
+
+           
+
+            .flex-content{
+                display: flex;
+                justify-content: space-between;
+                color: #fff;
+                align-items: center;
+
+                h2{
+                    text-transform: capitalize;
+                }
+            }
+
+            .day{
+                display: none;
+
+                &.active{display: flex;}
+            }
+
+            .weekly{
+                display: none;
+
+                &.active{display: flex;}
+            }
+
+            .monthly{
+                display: none;
+
+                &.active{display: flex;}
+            }
+
+
+            // .tab-content{
+            //     // display: none;
+            
+            //     // &.active{display: block;}
+            // }
+
+            .info-content{
+                // display: flex;
+                color: #fff;
+                align-items: center;
+                justify-content: space-between;
+
+                .time{
+                    font-size: 4rem;
+                }
+
+                p{
+                    font-size: 1.8rem;
+                }
+            }
+
+           
+        }
+    }
+}

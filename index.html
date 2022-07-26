@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <section class="dashboard">
+    <!-- Left container -->
+      <div class="dashboard-left_container">
+        <!-- top container -->
+        <div class="dashboard-left_container_top">
+          <div class="img">
+            <img src="images/image-jeremy.png" alt="">
+          </div>
+
+          <!-- profile content -->
+          <div class="content">
+            <h4>Report for</h4>
+            <h2>Jeremy Robson</h2>
+          </div>
+        </div>
+        <!-- end of top container -->
+
+        <!-- bottom container -->
+        <div class="dashboard-left_container_bottom">
+          <button class="button_daily">daily</button>
+          <button class="button_weekly">weekly</button>
+          <button class="button_monthly">monthly</button>
+        </div>
+      </div>
+      <!-- end of bottom container -->
+    
+    <!-- End of left container -->
+
+    <!-- Right container -->
+    <div class="dashboard-right">
+
+      <!-- work -->
+      <div class="dashboard-right_container work">
+        <div class="top top-work"></div>
+
+        <div class="bottom">
+          <div class="flex-content">
+            <h2>work</h2>
+            <div class="dot">...</div>
+          </div>
+
+          
+          <!-- daily -->
+          <div class="info-content day" id="daily">
+            <h2 class="time">5hrs</h2>
+            <p id="previous">Yesterday - <span>36hrs</span></p>
+          </div>
+
+          <!-- weekly -->
+          <div class="info-content weekly" id="weekly">
+            <h2 class="time">32hrs</h2>
+            <p>last <span id="calendar">week</span> - <span id="previous">36hrs</span></p>
+          </div>
+
+          <!-- monthly -->
+          <div class="info-content monthly" id="monthly">
+            <h2 class="time">103hrs</h2>
+            <p>last <span id="calendar">month</span> - <span id="previous">128hrs</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- play -->
+      <div class="dashboard-right_container play">
+        <div class="top top-play"></div>
+
+        <div class="bottom">
+          <div class="flex-content">
+            <h2>play</h2>
+            <div class="dot">...</div>
+          </div>
+
+          <!-- daily -->
+          <div class="info-content day" id="daily1">
+            <h2 class="time">1hr</h2>
+            <p>Yesterday  - <span id="previous">10hrs</span></p>
+          </div>
+
+          <!-- weekly -->
+          <div class="info-content weekly" id="weekly">
+            <h2 class="time">10hrs</h2>
+            <p>last <span id="calendar">week</span> - <span id="previous">8hrs</span></p>
+          </div>
+
+          <!-- monthly -->
+          <div class="info-content monthly" id="monthly">
+            <h2 class="time">23hrs</h2>
+            <p>last <span id="calendar">month</span> - <span id="previous">29hrs</span></p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- study -->
+      <div class="dashboard-right_container study">
+        <div class="top top-study"></div>
+
+        <div class="bottom">
+          <div class="flex-content">
+            <h2>study</h2>
+            <div class="dot">...</div>
+          </div>
+
+          <!-- daily -->
+          <div class="info-content day" id="daily">
+            <h2 class="time">0hrs</h2>
+            <p>Yesterday - <span id="previous">1hr</span></p>
+          </div>
+
+          <!-- weekly -->
+          <div class="info-content weekly" id="weekly">
+            <h2 class="time">4hrs</h2>
+            <p>last <span id="calendar">week</span> - <span id="previous">7hrs</span></p>
+          </div>
+
+          <!-- monthly -->
+          <div class="info-content monthly" id="monthly">
+            <h2 class="time">13hrs</h2>
+            <p>last <span id="calendar">month</span> - <span id="previous">19hrs</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- exercise -->
+      <div class="dashboard-right_container exercise">
+        <div class="top top-exercise"></div>
+
+        <div class="bottom">
+          <div class="flex-content">
+            <h2>exercise</h2>
+            <div class="dot">...</div>
+          </div>
+
+          <!-- daily -->
+          <div class="info-content day" id="daily">
+            <h2 class="time">1hr</h2>
+            <p>Yesterday - <span id="previous">1hr</span></p>
+          </div>
+
+          <!-- weekly -->
+          <div class="info-content weekly" id="weekly">
+            <h2 class="time">4hrs</h2>
+            <p>last <span id="calendar">week</span> - <span id="previous">5hrs</span></p>
+          </div>
+
+          <!-- monthly -->
+          <div class="info-content monthly" id="monthly">
+            <h2 class="time">11hrs</h2>
+            <p>last <span id="calendar">month</span> - <span id="previous">18hrs</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- social -->
+      <div class="dashboard-right_container social">
+        <div class="top top-social"></div>
+
+        <div class="bottom social">
+          <div class="flex-content">
+            <h2>social</h2>
+            <div class="dot">...</div>
+          </div>
+
+          <!-- daily -->
+          <div class="info-content day" id="daily">
+            <h2 class="time">1hr</h2>
+            <p>Yesterday - <span id="previous">3hrs</span></p>
+          </div>
+
+          <!-- weekly -->
+          <div class="info-content weekly" id="weekly">
+            <h2 class="time">5hrs</h2>
+            <p>last <span id="calendar">week</span> - <span id="previous">10hrs</span></p>
+          </div>
+
+          <!-- monthly -->
+          <div class="info-content weekly" id="monthly">
+            <h2 class="time">21hrs</h2>
+            <p>last <span id="calendar">month</span> - <span id="previous">23hrs</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- self-care -->
+      <div class="dashboard-right_container self-care">
+        <div class="top top-self_care"></div>
+
+        <div class="bottom">
+          <div class="flex-content">
+            <h2>self-care</h2>
+            <div class="dot">...</div>
+          </div>
+
+          <!-- daily -->
+          <div class="info-content day" id="daily">
+            <h2 class="time">0hrs</h2>
+            <p>Yesterday - <span id="previous">1hr</span></p>
+          </div>
+
+          <!-- weekly -->
+          <div class="info-content weekly" id="weekly">
+            <h2 class="time">2hrs</h2>
+            <p>last <span id="calendar">week</span> - <span id="previous">2hrs</span></p>
+          </div>
+
+          <!-- monthly -->
+          <div class="info-content monthly" id="monthly">
+            <h2 class="time">7hrs</h2>
+            <p>last <span id="calendar">month</span> - <span id="previous">11hrs</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="./javascript/script.js"></script>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
