@@ -66,6 +66,8 @@ body{
             border-bottom-right-radius: 1rem;
             background-color: $Dark-blue;
 
+            
+
             button{
                 border: none;
                 background: none;
@@ -133,6 +135,9 @@ body{
             margin-top: -2rem;
             padding: 3rem;
 
+            .dot{
+                .fa-solid{font-size: 2.5rem;}
+            }
            
 
             .flex-content{

@@ -79,6 +79,8 @@ body {
     border-radius: 1rem;
     margin-top: -2rem;
     padding: 3rem; }
+    .dashboard-right_container .bottom .dot .fa-solid {
+      font-size: 2.5rem; }
     .dashboard-right_container .bottom .flex-content {
       display: flex;
       justify-content: space-between;
