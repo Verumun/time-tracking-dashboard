@@ -213,6 +213,19 @@ body{
 }
 
 
+@media screen and (max-width: 320px){
+    .dashboard{
+        &-right_container{
+            .bottom{
+                .info-content{
+                    p{font-size: 1.5rem;}
+                    h2{font-size:2.5rem;}
+                }
+            }
+        }
+    }
+}
+
 // media Querries
 @media screen and (min-width: 1024px){
     body{
