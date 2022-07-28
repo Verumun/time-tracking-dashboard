@@ -4,6 +4,7 @@ html{
 }
 
 @import 'abstracts/variables';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 
 *{
     margin: 0;
@@ -16,10 +17,8 @@ html{
 body{
     background-color: $Very-dark-blue;
     display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // height: 100vh;
     font-size: 1.3rem;
+    font-family: 'Rubik', sans-serif;
 }
 
 .dashboard{
@@ -38,7 +37,7 @@ body{
             align-items: center;
             color: #fff;
             gap: 1.5rem;
-            background-color: $Soft-blue-play;
+            background-color: $blue;
             // max-width: 30rem;
             border-radius: 1rem;
             padding: 2rem;
@@ -52,9 +51,17 @@ body{
                 border-radius: 100%;
             }
 
-            // .content{
+            .content{
+                h4{
+                    font-weight: 300;
+                }
 
-            // }
+                h2{
+                    font-weight: 400;
+                    font-size: 2rem;
+                }
+            }
+
         }
 
 
@@ -73,11 +80,13 @@ body{
                 background: none;
                 cursor: pointer;
                 text-transform: capitalize;
-                color: #fff; //change to blue
+                color: $Desaturated-blue; //change to blue
 
-                &.active{
-                    color: black;
-                    transition: color 200ms ease-in;
+
+
+                &.active, &:hover{
+                    color: #fff;
+                    transition: color 200ms ease-in-out;
                 }
             }
         }
@@ -134,11 +143,28 @@ body{
             border-radius: 1rem;
             margin-top: -2rem;
             padding: 3rem;
+            transition: background-color $transition;
+            line-height: 1.5;
+
+            &:hover{
+                background-color: hsl(237, 28%, 26%);
+            }
 
             .dot{
                 .fa-solid{font-size: 2.5rem;}
             }
-           
+
+            h2{font-weight: 400;}
+
+            .time{
+                font-weight: 300;
+            }
+
+            p{
+                font-weight: 300;
+                color: $Pale-Blue;
+            }
+        
 
             .flex-content{
                 display: flex;
@@ -151,19 +177,7 @@ body{
                 }
             }
 
-            .day{
-                display: none;
-
-                &.active{display: flex;}
-            }
-
-            .weekly{
-                display: none;
-
-                &.active{display: flex;}
-            }
-
-            .monthly{
+            .day, .weekly, .monthly{
                 display: none;
 
                 &.active{display: flex;}
@@ -182,6 +196,8 @@ body{
                 align-items: center;
                 justify-content: space-between;
 
+                
+
                 .time{
                     font-size: 4rem;
                 }
@@ -192,6 +208,96 @@ body{
             }
 
            
+        }
+    }
+}
+
+
+// media Querries
+@media screen and (min-width: 1024px){
+    body{
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .dashboard{
+        max-width: 80%;
+        // margin: 10rem auto;
+        // height: 100vh;
+        &-right{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1300px){
+    .dashboard{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        max-width: 80%;
+        margin: auto;
+        gap: 3rem;
+
+
+        &-right{
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &-left_container{
+            display: flex;
+            flex-direction: column;
+            
+            // flex-wrap: wrap;
+
+            &_top{
+                flex-direction: column;
+                align-items: initial;
+                padding-bottom: 5rem;
+                padding-top: 3rem;
+                top: unset;
+
+                .content{
+                    padding-top: 2.5rem;
+
+                    h2{font-size: 4rem; font-weight: 300;}
+
+
+                }
+
+            }
+
+            &_bottom{
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 2rem;
+                // line-height: 2.5;
+                height: 17.5rem;
+                margin-top: -1rem;
+
+                button{
+                    line-height: 3;
+                    width: 100%;
+                    text-align: left;
+
+                }
+            }
+        }
+
+
+        &-right_container{
+
+
+            .bottom{
+                .info-content{
+                    // display: flex;
+                    flex-direction: column;
+                    align-items: initial;
+                    margin-top: 1.2rem;
+                }
+            }
         }
     }
 }
