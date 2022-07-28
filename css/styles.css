@@ -51,7 +51,8 @@ body {
       background: none;
       cursor: pointer;
       text-transform: capitalize;
-      color: #6f76c8; }
+      color: #6f76c8;
+      font-size: 1.8rem; }
       .dashboard-left_container_bottom button.active, .dashboard-left_container_bottom button:hover {
         color: #fff;
         transition: color 200ms ease-in-out; }

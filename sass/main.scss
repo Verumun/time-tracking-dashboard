@@ -81,6 +81,7 @@ body{
                 cursor: pointer;
                 text-transform: capitalize;
                 color: $Desaturated-blue; //change to blue
+                font-size: 1.8rem;
 
 
 
@@ -183,12 +184,6 @@ body{
                 &.active{display: flex;}
             }
 
-
-            // .tab-content{
-            //     // display: none;
-            
-            //     // &.active{display: block;}
-            // }
 
             .info-content{
                 // display: flex;
