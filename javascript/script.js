@@ -79,4 +79,4 @@ btnMonthly.addEventListener('click', function(){
   btnMonthly.classList.add('active')
 })
 
-// document.getElementById("daily1").click();
+document.getElementById("week").click();
